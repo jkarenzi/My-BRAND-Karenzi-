@@ -1,0 +1,311 @@
+* {
+    font-family: 'Poppins',sans-serif;
+}
+
+header{
+    width: 100%;
+    background-color: #222222;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-left: 3rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.user-box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1.5px solid#DF5F17;
+    margin-right: 2rem;
+}
+
+.user-box2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    overflow: hidden;
+}
+
+.user-box2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+    color:white;
+    height: 12rem;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 7rem;
+}
+
+.dropdown button {
+    background: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    color: white;
+    width: 99%;
+    padding-left: 1rem;
+    height: 3rem;
+}
+
+.dropdown1{
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #222222;
+    color:white;
+    height: 4rem;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 6rem;
+    height: 4rem;
+}
+
+.dropdown1 button {
+    background: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 50%;
+}
+
+.dropdown1 button:hover, .dropdown button:hover {
+    background: #3a3a3a;
+}
+
+.dropdown a, .dropdown1 a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: small;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 25%;
+    width: 85%;
+    padding-left: 1rem;
+}
+
+.dropdown1 a{
+    height: 50%;
+}
+
+.dropdown a:hover, .dropdown1 a:hover {
+    background: #3a3a3a;
+}
+
+.ham{
+    display: none;
+}
+
+.contact-body {
+    margin: 0;
+    padding: 0;
+    background-color: #161513;
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 30rem;
+    margin-left: 3rem;
+}
+
+.contact-form h3 {
+    font-size: x-large;
+    font-weight: 500;
+    margin: 0;
+}
+
+.contact-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.contact-input input {
+    background-color: #161513;
+    border: 1.5px solid #DF5F17;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 2rem;
+}
+
+.contact-input textarea {
+    background-color: #161513;
+    border: 1.5px solid #DF5F17;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 8rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 9.5rem;
+    background-color: #222222;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+footer h3, footer h4 {
+    margin: 0;
+}
+
+.footer-part1{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-left h4 {
+    font-weight: 400;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-right h3 {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.copyright {
+    font-weight: 400;
+    font-size: small;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DF5F17;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 8rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 35px;
+        height: 20px;
+    }
+    
+    nav {
+        display: none;
+    }
+    
+    .user-box1{
+        display: none;
+    }
+    
+    .ham {
+        display: flex;
+        margin-right: 1rem;
+    }
+
+    footer {
+        height: 14rem;
+    }
+
+    .footer-part1{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        width: 85%;
+    }
+}
