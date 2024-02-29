@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Mgt</title>
+        <link rel="stylesheet" href="./css/blogManagement.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body class="blogmgt-body">
+        <div class="big-header">
+            <header>
+                <img class="logo" src="./images/MJ.png" width="50px" height="30px"/>
+                <nav>
+                    <a href="./landing.html">About</a>
+                    <a href="./contact.html">Contact me</a>
+                    <a href="./portfolio.html">Portfolio</a>
+                    <a href="./blogs.html">Blogs</a>
+                </nav>
+                <div class="user-box1">
+                    <div class="user-box2">
+                        <img src="./images/profile.jpg"/>
+                    </div>
+                </div>
+                <img src="./images/hamburger.png" class="ham" width="20px" height="15px"/>
+                <div class="dropdown">
+                    <a href="./landing.html">About</a>
+                    <a href="./contact.html">Contact me</a>
+                    <a href="./portfolio.html">Portfolio</a>
+                    <a href="./blogs.html">Blogs</a>
+                    <a href="./profile.html">Profile</a>
+                    <button>Logout</button>
+                </div>
+                <div class='dropdown1'>
+                    <a href="./profile.html">Profile</a>
+                    <button>Logout</button>
+                </div>
+            </header>
+            <div class="sm-header">
+                <div class="sm-header-link">
+                    <a href="./admin.html">Queries</a>
+                </div>
+                <div class="sm-header-link">
+                    <a href="#">Blogs</a>
+                </div>
+            </div>
+        </div>
+        <div class="blog-overlay-big">
+            <div class="blog-overlay">
+                <div class="blog-overlay-header">
+                    <h3>New Blog</h3>
+                    <div class="back-circular">
+                        <img src="./images/close.png" width="15px" height="15px" class="closeBlog"/>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-blog">
+                        <label>Title</label>
+                        <input type="text"/>
+                    </div>
+                    <div class="form-blog">
+                        <label>Body</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="form-img-input">
+                        <label>Cover Image</label>
+                        <input type="file" accept="image/png"/>
+                    </div>
+                    <button>Submit</button>   
+                </form>
+            </div>
+        </div>
+        <div class="blogmgt-container">
+            <div class="blogmgt-header">
+                <button class="login-btn-blog">
+                    New Blog
+                </button>
+                <form class="blog-search">
+                    <img src="./images/search.png" width="15px" height="15px"/>
+                    <input type="text" placeholder="Search Blogs"/>
+                </form>
+            </div>
+            <div class="bloglist-container">
+                <div class="blog-mgt-blog">
+                    <div class="blog-mgt-blog-header">
+                        <div class="blogmgt-title">
+                            The impact of AI on software development
+                        </div>
+                        <div class="blogmgt-options">
+                            <img src="./images/down.png" width="15px" height="15px" class="toggleDets"/>
+                            <img src="./images/edit.png" width="15px" height="15px" />
+                            <img src="./images/delete.png" width="15px" height="15px"/>
+                        </div>
+                    </div> 
+                    <div class="details-blogmgt">
+                        <li>Published on 19 Feb 2024</li>
+                        <li>15 Likes</li>
+                        <li>25 Dislikes</li>
+                        <li>13K Comments</li>
+                    </div>  
+                </div>
+                <div class="blog-mgt-blog">
+                    <div class="blog-mgt-blog-header">
+                        <div class="blogmgt-title">
+                            Best programming languages 2024
+                        </div>
+                        <div class="blogmgt-options">
+                            <img src="./images/down.png" width="15px" height="15px" class="toggleDets"/>
+                            <img src="./images/edit.png" width="15px" height="15px"/>
+                            <img src="./images/delete.png" width="15px" height="15px"/>
+                        </div>
+                    </div>
+                    <div class="details-blogmgt">
+                        <li>Published on 19 Feb 2024</li>
+                        <li>15 Likes</li>
+                        <li>25 Dislikes</li>
+                        <li>13K Comments</li>
+                    </div>   
+                </div>
+                <div class="blog-mgt-blog">
+                    <div class="blog-mgt-blog-header">
+                        <div class="blogmgt-title">
+                            The importance of soft skills in the software development industry
+                        </div>
+                        <div class="blogmgt-options">
+                            <img src="./images/down.png" width="15px" height="15px" class="toggleDets"/>
+                            <img src="./images/edit.png" width="15px" height="15px"/>
+                            <img src="./images/delete.png" width="15px" height="15px"/>
+                        </div>
+                    </div>
+                    <div class="details-blogmgt">
+                        <li>Published on 19 Feb 2024</li>
+                        <li>15 Likes</li>
+                        <li>25 Dislikes</li>
+                        <li>13K Comments</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-part1">
+                <div class="footer-left">
+                    <div class="footer-icons">
+                        <img src="./images/email.png" width="20px" height="20px">
+                        <h4>j.karenzi@alustudent.com</h4>
+                    </div>
+                    <div class="footer-icons">
+                        <img src="./images/telephone.png" width="20px" height="20px">
+                        <h4>+250789906160</h4>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h3>Socials</h3>
+                    <div class="socials">
+                        <img src='./images/youtube.png' width="40px" height="30px"/>
+                        <img src='./images/instagram.png' width="30px" height="30px"/>
+                        <img src='./images/whatsapp.png' width="35px" height="35px"/>
+                        <img src='./images/linkedin.png' width="30px" height="30px"/>
+                        <img src='./images/x.png' width="30px" height="30px"/>
+                    </div>
+                </div>
+            </div>
+            <h4 class="copyright">Copyright@2024. All rights reserved</h4>
+        </footer>
+        <script src="./css/main.js"></script>
+    </body>
+</html>
