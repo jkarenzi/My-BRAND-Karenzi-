@@ -14,11 +14,11 @@
             <img class="logo" src="./images/MJ.png" width="50px" height="30px"/>
             <nav>
                 <a href="./landing.html">About</a>
-                <a href="./contact.html">Contact me</a>
+                <a href="./contact.html" id="contact.html">Contact me</a>
                 <a href="./portfolio.html">Portfolio</a>
                 <a href="./blogs.html">Blogs</a>
             </nav>
-            <div class="user-box1">
+            <div class="user-box1" onclick="toggleMenu()">
                 <div class="user-box2">
                     <img src="./images/profile.jpg"/>
                 </div>
@@ -41,15 +41,18 @@
             <h3>Get in touch</h3>
             <div class="contact-input">
                 <label>Username</label>
-                <input type="text" />
+                <input type="text" id="contact-username"/>
+                <div id="error-contact-usr"></div>
             </div>
             <div class="contact-input">
                 <label>Email</label>
-                <input type="text" />
+                <input type="text" id="contact-email"/>
+                <div id="error-contact-email"></div>
             </div>
             <div class="contact-input">
                 <label>Message</label>
-                <textarea></textarea>
+                <textarea id="contact-textarea"></textarea>
+                <div id="error-contact-textarea"></div>
             </div>
             <button class="login-btn">Submit</button>
         </form>
@@ -79,5 +82,6 @@
             <h4 class="copyright">Copyright@2024. All rights reserved</h4>
         </footer>
         <script src="./css/main.js"></script>
+        <script src="./contact.js"></script>
     </body>
 </html>
