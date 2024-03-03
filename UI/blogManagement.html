@@ -19,7 +19,7 @@
                     <a href="./portfolio.html">Portfolio</a>
                     <a href="./blogs.html">Blogs</a>
                 </nav>
-                <div class="user-box1">
+                <div class="user-box1" onclick="toggleMenu()">
                     <div class="user-box2">
                         <img src="./images/profile.jpg"/>
                     </div>
@@ -43,7 +43,7 @@
                     <a href="./admin.html">Queries</a>
                 </div>
                 <div class="sm-header-link">
-                    <a href="#">Blogs</a>
+                    <a href="./blogManagement.html">Blogs</a>
                 </div>
             </div>
         </div>
@@ -55,18 +55,21 @@
                         <img src="./images/close.png" width="15px" height="15px" class="closeBlog"/>
                     </div>
                 </div>
-                <form>
+                <form action="/" method="post" id="blog-form">
                     <div class="form-blog">
                         <label>Title</label>
-                        <input type="text"/>
+                        <input type="text" id="blog-title"/>
+                        <div id="error-title"></div>
                     </div>
                     <div class="form-blog">
                         <label>Body</label>
-                        <textarea></textarea>
+                        <textarea id="blog-blog"></textarea>
+                        <div id="error-blog"></div>
                     </div>
                     <div class="form-img-input">
                         <label>Cover Image</label>
-                        <input type="file" accept="image/png"/>
+                        <input type="file" accept="image/png" id="blog-image"/>
+                        <div id="error-image"></div>
                     </div>
                     <button>Submit</button>   
                 </form>
@@ -165,5 +168,6 @@
             <h4 class="copyright">Copyright@2024. All rights reserved</h4>
         </footer>
         <script src="./css/main.js"></script>
+        <script src="./blogManagement.js"></script>
     </body>
 </html>
