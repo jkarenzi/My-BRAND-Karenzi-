@@ -510,5 +510,17 @@ footer h3, footer h4 {
         top: 0.5rem;
         right: 0;
     }
+
+    .sm-header{
+        padding: 0;
+    }
+
+    .sm-header-link {
+        width: 50%;
+    }
+
+    .sm-header-link:first-of-type {
+        margin: 0;
+    }
 }
 
