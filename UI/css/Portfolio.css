@@ -1,0 +1,447 @@
+* {
+    font-family: 'Poppins',sans-serif;
+}
+
+header{
+    width: 100%;
+    background-color: #222222;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-left: 3rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.user-box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1.5px solid#DF5F17;
+    margin-right: 2rem;
+}
+
+.user-box2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    overflow: hidden;
+}
+
+.user-box2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+    color:white;
+    height: 12rem;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 7rem;
+}
+
+.dropdown button {
+    background: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    color: white;
+    width: 99%;
+    padding-left: 1rem;
+    height: 3rem;
+}
+
+.dropdown1{
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #222222;
+    color:white;
+    height: 4rem;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 6rem;
+    height: 4rem;
+}
+
+.dropdown1 button {
+    background: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 50%;
+}
+
+.dropdown1 button:hover, .dropdown button:hover {
+    background: #3a3a3a;
+}
+
+.dropdown a, .dropdown1 a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: small;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 25%;
+    width: 85%;
+    padding-left: 1rem;
+}
+
+.dropdown1 a{
+    height: 50%;
+}
+
+.dropdown a:hover, .dropdown1 a:hover {
+    background: #3a3a3a;
+}
+
+.ham{
+    display: none;
+}
+
+.portfolio-body {
+    margin: 0;
+    padding: 0;
+    background-color: #161513;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+#port-title {
+    margin: 0;
+    color: #5BADFF;
+    font-weight: 400;
+    font-size: larger;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.exp-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.exp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.exp-header h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.exp-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.exp-desc {
+    text-align: justify;
+    font-weight: lighter;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: flex-start;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.skills-inner-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.frontend, .backend, .db-mgt {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.frontend h3, .backend h3, .db-mgt h3 {
+    margin: 0;
+    font-weight: 400;
+    font-size: medium;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.actual-project {
+    width: 15rem;
+    height: 20rem;
+    background-color: #222222;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding-bottom: 0.5rem;
+}
+
+.actual-project-img {
+    width: 100%;
+    height: 55%;
+}
+
+.actual-project-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.actual-project-desc {
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+#port-title1{
+    margin: 0;
+    color: #5BADFF;
+    font-weight: 400;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: medium;
+}
+
+.actual-project-text {
+    text-align: justify;
+    font-weight: 300;
+    font-size: small;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.actual-project button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DF5F17;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 6rem;
+    height: 1.5rem;
+    align-self: center;
+}
+
+.projects-outer-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-inner-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 47rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.project-inner-container::-webkit-scrollbar {
+    display: none;
+}
+
+.left-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: #3a3a3a;
+    margin-right: 0.2rem;
+}
+
+.right-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: #3a3a3a;
+    margin-left: 0.2rem;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    background-color: #272727;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 9.5rem;
+    background-color: #222222;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+footer h3, footer h4 {
+    margin: 0;
+}
+
+.footer-part1{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-left h4 {
+    font-weight: 400;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-right h3 {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.copyright {
+    font-weight: 400;
+    font-size: small;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 35px;
+        height: 20px;
+    }
+    
+    nav {
+        display: none;
+    }
+    
+    .user-box1{
+        display: none;
+    }
+    
+    .ham {
+        display: flex;
+        margin-right: 1rem;
+    }
+
+    footer {
+        height: 14rem;
+    }
+
+    .footer-part1{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
