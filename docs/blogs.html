@@ -3,20 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Profile</title>
-        <link rel="stylesheet" href="./css/Profile.css">
+        <title>Blogs</title>
+        <link rel="stylesheet" href="./css/Blogs.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
-    <body class="profile-body">
+    <body class="blog-body">
         <header>
             <img class="logo" src="./images/MJ.png" width="50px" height="30px"/>
             <nav>
-                <a href="./landing.html">About</a>
+                <a href="./index.html">About</a>
                 <a href="./contact.html">Contact me</a>
                 <a href="./portfolio.html">Portfolio</a>
-                <a href="./blogs.html">Blogs</a>
+                <a href="./blogs.html" id="blogs.html">Blogs</a>
             </nav>
             <div class="user-box1" onclick="toggleMenu()">
                 <div class="user-box2">
@@ -25,7 +25,7 @@
             </div>
             <img src="./images/hamburger.png" class="ham" width="20px" height="15px"/>
             <div class="dropdown">
-                <a href="./landing.html">About</a>
+                <a href="./index.html">About</a>
                 <a href="./contact.html">Contact me</a>
                 <a href="./portfolio.html">Portfolio</a>
                 <a href="./blogs.html">Blogs</a>
@@ -37,29 +37,68 @@
                 <button>Logout</button>
             </div>
         </header>
-        <div class="profile-header">
-            Manzi Karenzi's Profile settings
-        </div>
-        <div class="profile-container">
-            <div class="user-box5">
-                <div class="user-box6">
-                    <img src="./images/profile.jpg"/>
-                </div>
-                <img src="./images/change-profile.png" width="30px" height="30px" class="camera"/>
+        <div class='blog-container'>
+            <div class='left-arrow' onclick="scrollLeft1()">
+                <img src='./images/left-arrow.png' width="15px" height="15px"/>
             </div>
-            <div class="profile-change">
-                <div class="change">
-                    <h3>Username: Manzi Karenzi</h3>
-                    <img src="./images/pencil.png" width="15px" height="15px"/>
+            <div class='blog-inner-container'>
+                <div class='blog'>
+                    <div class='blog-img'>
+                        <img src='./images/ai.jpg'/>
+                    </div>
+                    <div class='blog-part2'>
+                        <h3>The impact of AI on software development</h3>
+                        <h3>Jun 03, 2023</h3>
+                    </div>
                 </div>
-                <div class="change">
-                    <h3>Email: j.karenzi@alustudent.com</h3>
-                    <img src="./images/pencil.png" width="15px" height="15px"/>
+                <div class='blog'>
+                    <div class='blog-img'>
+                        <img src='./images/prog.jpg'/>
+                    </div>
+                    <div class='blog-part2'>
+                        <h3>The best programming languages of 2024</h3>
+                        <h3>Mar 14, 2022</h3>
+                    </div>
                 </div>
-                <div class="change">
-                    <h3>Password: ************</h3>
-                    <img src="./images/pencil.png" width="15px" height="15px"/>
+                <div class='blog'>
+                    <div class='blog-img'>
+                        <img src='./images/personal.jpg'/>
+                    </div>
+                    <div class='blog-part2'>
+                        <h3>Personal branding</h3>
+                        <h3>Jan 02, 2024</h3>
+                    </div>
                 </div>
+                <div class='blog'>
+                    <div class='blog-img'>
+                        <img src='./images/roadmap.png'/>
+                    </div>
+                    <div class='blog-part2'>
+                        <h3>FullStack roadmap</h3>
+                        <h3>Dec 05, 2019</h3>
+                    </div>
+                </div>
+                <div class='blog'>
+                    <div class='blog-img'>
+                        <img src='./images/code.png'/>
+                    </div>
+                    <div class='blog-part2'>
+                        <h3>Mistakes I did when learning how to code</h3>
+                        <h3>May 01, 2021</h3>
+                    </div>
+                </div>
+                <div class='blog'>
+                    <div class='blog-img'>
+                        <img src='./images/ps5.jpg'/>
+                    </div>
+                    <div class='blog-part2'>
+                        <h3>Game Development</h3>
+                        <h3>Nov 25, 2020</h3>
+                    </div>
+                </div>
+            </div>
+            <div class='right-arrow' onclick="scrollRight1()">
+                <img src='./images/right-arrow.png' width="15px" height="15px"/>
             </div>
         </div>
         <footer>
@@ -88,5 +127,6 @@
             <h4 class="copyright">Copyright@2024. All rights reserved</h4>
         </footer>
         <script src="./css/main.js"></script>
+        <script src="./blogs.js"></script>
     </body>
 </html>

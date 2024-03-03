@@ -3,20 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blogs</title>
-        <link rel="stylesheet" href="./css/Blogs.css">
+        <title>LandingPage</title>
+        <link rel="stylesheet" href="./css/LandingPage.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
-    <body class="blog-body">
+    <body class="landing-body">
         <header>
             <img class="logo" src="./images/MJ.png" width="50px" height="30px"/>
             <nav>
-                <a href="./landing.html" id="landing.html">About</a>
+                <a href="./index.html" id="index.html">About</a>
                 <a href="./contact.html">Contact me</a>
                 <a href="./portfolio.html">Portfolio</a>
-                <a href="./blogs.html" id="blogs.html">Blogs</a>
+                <a href="./blogs.html">Blogs</a>
             </nav>
             <div class="user-box1" onclick="toggleMenu()">
                 <div class="user-box2">
@@ -37,68 +37,21 @@
                 <button>Logout</button>
             </div>
         </header>
-        <div class='blog-container'>
-            <div class='left-arrow' onclick="scrollLeft1()">
-                <img src='./images/left-arrow.png' width="15px" height="15px"/>
-            </div>
-            <div class='blog-inner-container'>
-                <div class='blog'>
-                    <div class='blog-img'>
-                        <img src='./images/ai.jpg'/>
-                    </div>
-                    <div class='blog-part2'>
-                        <h3>The impact of AI on software development</h3>
-                        <h3>Jun 03, 2023</h3>
-                    </div>
-                </div>
-                <div class='blog'>
-                    <div class='blog-img'>
-                        <img src='./images/prog.jpg'/>
-                    </div>
-                    <div class='blog-part2'>
-                        <h3>The best programming languages of 2024</h3>
-                        <h3>Mar 14, 2022</h3>
-                    </div>
-                </div>
-                <div class='blog'>
-                    <div class='blog-img'>
-                        <img src='./images/personal.jpg'/>
-                    </div>
-                    <div class='blog-part2'>
-                        <h3>Personal branding</h3>
-                        <h3>Jan 02, 2024</h3>
-                    </div>
-                </div>
-                <div class='blog'>
-                    <div class='blog-img'>
-                        <img src='./images/roadmap.png'/>
-                    </div>
-                    <div class='blog-part2'>
-                        <h3>FullStack roadmap</h3>
-                        <h3>Dec 05, 2019</h3>
-                    </div>
-                </div>
-                <div class='blog'>
-                    <div class='blog-img'>
-                        <img src='./images/code.png'/>
-                    </div>
-                    <div class='blog-part2'>
-                        <h3>Mistakes I did when learning how to code</h3>
-                        <h3>May 01, 2021</h3>
-                    </div>
-                </div>
-                <div class='blog'>
-                    <div class='blog-img'>
-                        <img src='./images/ps5.jpg'/>
-                    </div>
-                    <div class='blog-part2'>
-                        <h3>Game Development</h3>
-                        <h3>Nov 25, 2020</h3>
-                    </div>
+        <div class="about-container">
+            <div class="user-box3">
+                <div class="user-box4">
+                    <img src="./images/profile.jpg"/>
                 </div>
             </div>
-            <div class='right-arrow' onclick="scrollRight1()">
-                <img src='./images/right-arrow.png' width="15px" height="15px"/>
+            <div class="about-desc">
+                <h3>Manzi Karenzi</h3>
+                <p>
+                    I am a seasoned full-stack software engineer with over 
+                    8 years of professional experience, specializing in backend development. 
+                    My expertise lies in crafting robust and scalable SaaS-based architectures 
+                    on the Amazon AWS platform.
+                </p>
+                <button class="cv-btn">Download CV</button>
             </div>
         </div>
         <footer>
@@ -127,6 +80,5 @@
             <h4 class="copyright">Copyright@2024. All rights reserved</h4>
         </footer>
         <script src="./css/main.js"></script>
-        <script src="./blogs.js"></script>
     </body>
 </html>
