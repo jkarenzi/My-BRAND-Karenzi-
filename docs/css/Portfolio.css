@@ -163,14 +163,14 @@ nav a {
     margin: 0;
     color: #5BADFF;
     font-weight: 400;
-    font-size: larger;
+    font-size: x-large;
 }
 
 .experience {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 90%;
+    align-items: center;
+    width: 80%;
     margin-top: 2rem;
     gap: 1rem;
 }
@@ -179,6 +179,7 @@ nav a {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .exp-header {
@@ -207,15 +208,48 @@ nav a {
     display: flex;
     flex-direction: column;
     width: 90%;
-    align-items: flex-start;
-    margin-top: 2rem;
+    align-items: center;
+    margin-top: 4rem;
     gap: 1rem;
+    
 }
 
 .skills-inner-cont {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 1.1rem;
+    height: 10rem;
+}
+
+.skills-inner-cont-1 {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
+    width: 6rem;
+    height: 7rem;
+    border-radius: 10px;
+    background-color: #3a3a3a;
+    /*transition: transform 0.3s ease;*/
+    transition: transform 0.5s ease;
+}
+
+.skills-inner-cont-1:hover{
+    width: 7rem;
+    height: 8rem;
+    transform: scale(1.1);
+}
+
+.skills-inner-cont-1 h3 {
+    margin: 0;
+    font-weight: 400;
+    font-size: small;
 }
 
 .frontend, .backend, .db-mgt {
@@ -236,8 +270,8 @@ nav a {
     width: 90%;
     align-items: center;
     margin-bottom: 4rem;
-    margin-top: 2rem;
-    gap: 1rem;
+    margin-top: 4rem;
+    gap: 2rem;
 }
 
 .actual-project {
@@ -249,17 +283,22 @@ nav a {
     flex-direction: column;
     overflow: hidden;
     flex-shrink: 0;
-    padding-bottom: 0.5rem;
 }
 
 .actual-project-img {
     width: 100%;
     height: 55%;
+    overflow: hidden;
 }
 
 .actual-project-img img {
     width: 100%;
     height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.actual-project-img:hover img{
+    transform: scale(1.2);
 }
 
 .actual-project-desc {
@@ -267,7 +306,8 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    justify-content: flex-start;
+    height: 45%;
 }
 
 #port-title1{
@@ -275,8 +315,8 @@ nav a {
     color: #5BADFF;
     font-weight: 400;
     margin-left: 1rem;
-    margin-top: 0.5rem;
     font-size: medium;
+    margin-top: 0.5rem;
 }
 
 .actual-project-text {
@@ -285,6 +325,7 @@ nav a {
     font-size: small;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-top: 0.2rem;
 }
 
 .actual-project button {
@@ -298,6 +339,7 @@ nav a {
     width: 6rem;
     height: 1.5rem;
     align-self: center;
+    margin-top: 0.6rem;
 }
 
 .projects-outer-container {
@@ -444,4 +486,30 @@ footer h3, footer h4 {
         align-items: flex-start;
         gap: 0.5rem;
     }
+
+    .skills-inner-cont{
+        height:fit-content;
+        justify-content: flex-start;
+    }
+
+    .left-arrow, .right-arrow{
+        display: none;
+   }
+
+   .projects-outer-container {
+        width: 100%;
+        height:fit-content;
+        margin-top:3rem;
+        margin-bottom: 3rem;
+   }
+
+   .project-inner-container {
+        flex-direction: column;
+        width: fit-content;
+        overflow-x: unset;
+   }
+
+   .actual-project {
+        width: 90%;
+   }
 }
