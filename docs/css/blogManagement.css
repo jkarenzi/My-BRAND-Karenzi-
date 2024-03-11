@@ -9,7 +9,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     color: white;
 }
@@ -469,10 +468,53 @@ footer h3, footer h4 {
     background-color: #222222;
 }
 
+/* refactor for dashboard*/
+.big-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 36rem;
+}
+
+.left-drawer{
+    display: flex;
+    flex-direction: column;
+    background: #222222;
+    width: 20%;
+    height: 100%;
+}
+
+.left-link{
+    width: 87%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+
+.left-link:hover {
+    background-color: #3a3a3a;
+}
+
+.left-link a {
+    text-decoration: none;
+    color:white;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 @media only screen and (max-width: 768px) {
     .logo {
         width: 35px;
         height: 20px;
+        margin-left: 2rem;
     }
     
     nav {
@@ -516,6 +558,18 @@ footer h3, footer h4 {
 
     .blog-overlay {
         width: 85%;
+    }
+
+    .left-drawer{
+        display: none;
+    }
+
+    .big-container{
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
     }
 }
 
