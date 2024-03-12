@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LandingPage</title>
+        <link rel="stylesheet" href="./css/dashboard.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="./images/MJ.png" width="50px" height="30px"/>
+            <div class="user-box1" onclick="toggleMenu()">
+                <div class="user-box2">
+                    <img src="./images/profile.jpg"/>
+                </div>
+            </div>
+            <img src="./images/hamburger.png" class="ham" width="20px" height="15px"/>
+            <div class="dropdown">
+                <a href="./dashboard.html">Dashboard</a>
+                <a href="./admin.html">Queries</a>
+                <a href="#">Users</a>
+                <a href="./blogManagement.html">Blogs</a>
+                <button>Logout</button>
+            </div>
+            <div class='dropdown1'>
+                <a href="./profile.html">Profile</a>
+                <button>Logout</button>
+            </div>
+        </header>
+        <div class="big-container">
+            <div class="left-drawer">
+                <div class="left-link">
+                    <a href="./dashboard.html">Dashboard</a>
+                </div>
+                <div class="left-link">
+                    <a href="./admin.html">Queries</a>
+                </div>
+                <div class="left-link">
+                    <a href="#">User Management</a>
+                </div>
+                <div class="left-link">
+                    <a href="./blogManagement.html">Blog Management</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="icon-container">
+                    <div class="icon">
+                        <div class="circular">
+                            15
+                        </div>
+                        <img src="./images/user.png" width="70px" height="70px">
+                        <h3>Users</h3>
+                    </div>
+                    <div class="icon">
+                        <div class="circular">
+                            9
+                        </div>
+                        <img src="./images/blog.png" width="70px" height="70px">
+                        <h3>Blogs</h3>
+                    </div>
+                    <div class="icon">
+                        <div class="circular">
+                            6
+                        </div>
+                        <img src="./images/message.png" width="70px" height="70px">
+                        <h3>Messages</h3>
+                    </div>
+                </div>
+                <div class="big-notifications">
+                    <div class="notification-header">
+                        <h3>Notifications</h3>
+                        <img src="./images/notify.png"  width="20px" height="20px">
+                    </div>
+                    <div class="notification">
+                        <div class="inner-not">
+                            <img src="./images/Ellipse 5.png" width="40px" height="40px">
+                            <div class="actual-not">
+                                Person1 commented on your blog: “The impact of AI on
+                                software development”
+                            </div>
+                        </div>
+                        <h3>5:14pm</h3>
+                    </div>
+                    <div class="notification">
+                        <div class="inner-not">
+                            <img src="./images/Ellipse 6.png" width="40px" height="40px">
+                            <div class="actual-not">
+                                Person2 liked your blog: “My experience in ATLP”
+                            </div>
+                        </div>
+                        <h3>5:14pm</h3>
+                    </div>
+                    <div class="notification">
+                        <div class="inner-not">
+                            <img src="./images/Ellipse 5.png" width="40px" height="40px">
+                            <div class="actual-not">
+                                You have a new message from Person3
+                            </div>
+                        </div>
+                        <h3>5:14pm</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./css/main.js"></script>
+        <script src="./dashboard.js"></script>
+    </body>
+</html>    
