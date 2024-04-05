@@ -14,7 +14,7 @@
             <img class="logo" src="./images/MJ.png" width="50px" height="30px"/>
             <div class="user-box1" onclick="toggleMenu()">
                 <div class="user-box2">
-                    <img src="./images/profile.jpg"/>
+                    
                 </div>
             </div>
             <img src="./images/hamburger.png" class="ham" width="20px" height="15px"/>
@@ -39,7 +39,7 @@
                     <a href="./admin.html">Queries</a>
                 </div>
                 <div class="left-link">
-                    <a href="#">User Management</a>
+                    <a href="./userManagement.html">User Management</a>
                 </div>
                 <div class="left-link">
                     <a href="./blogManagement.html">Blog Management</a>
@@ -53,7 +53,7 @@
                         </button>
                         <form class="blog-search">
                             <img src="./images/search.png" width="15px" height="15px"/>
-                            <input type="text" placeholder="Search Blogs"/>
+                            <input type="text" placeholder="Search Blogs" required/>
                         </form>
                     </div>
                     <div class="bloglist-container">
@@ -69,7 +69,7 @@
                         <img src="./images/close.png" width="15px" height="15px" class="closeBlog"/>
                     </div>
                 </div>
-                <form action="/" method="post" id="blog-form">
+                <form action="/" method="post" id="blog-form" enctype="multipart/form-data">
                     <div class="form-blog">
                         <label>Title</label>
                         <input type="text" id="blog-title"/>
@@ -85,7 +85,12 @@
                         <input type="file" accept="image/png" id="blog-image"/>
                         <div id="error-image"></div>
                     </div>
-                    <button>Submit</button>   
+                    <button>Submit</button>
+                    <div class="loader">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                    </div>   
                 </form>
             </div>
         </div>

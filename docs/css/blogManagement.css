@@ -43,6 +43,18 @@ nav a {
     padding-right: 1rem;
 }
 
+.header-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #DF5F17;
+    color: white;
+    margin-right: 2rem;
+}
+
 .user-box1{
     display: flex;
     align-items: center;
@@ -293,7 +305,7 @@ nav a {
 }
 
 .details-blogmgt {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     font-style: italic;
@@ -576,4 +588,42 @@ footer h3, footer h4 {
 #error-title, #error-blog, #error-image {
     color: red;
     font-size: x-small;
+}
+
+/* loading animation*/
+
+.loader {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+  
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #DF5F17;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+  
+.dot1 {
+animation-delay: -0.32s;
+}
+
+.dot2 {
+animation-delay: -0.16s;
+}
+
+.dot3 {
+animation-delay: 0s;
 }
