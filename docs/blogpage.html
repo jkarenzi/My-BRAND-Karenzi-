@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Page</title>
+        <link rel="stylesheet" href="./css/blogpage.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body class="blogpage-body">
+        <header>
+            <img class="logo" src="./images/MJ.png" width="50px" height="30px"/>
+            <nav>
+                <a href="./index.html">About</a>
+                <a href="./contact.html">Contact me</a>
+                <a href="./portfolio.html">Portfolio</a>
+                <a href="./blogs.html">Blogs</a>
+            </nav>
+            <div class="user-box1" onclick="toggleMenu()">
+                <div class="user-box2">
+                    
+                </div>
+            </div>
+            <img src="./images/hamburger.png" class="ham" width="20px" height="15px"/>
+            <div class="dropdown">
+                <a href="./index.html">About</a>
+                <a href="./contact.html">Contact me</a>
+                <a href="./portfolio.html">Portfolio</a>
+                <a href="./blogs.html">Blogs</a>
+                <a href="./profile.html">Profile</a>
+                <button>Logout</button>
+            </div>
+            <div class='dropdown1'>
+                <a href="./profile.html">Profile</a>
+                <button>Logout</button>
+            </div>
+        </header>
+        <div class="comment-overlay-big">
+            <div class="comment-overlay">
+                <div class="comment-overlay-header">
+                    <h3>Update Comment</h3>
+                    <img src="./images/close.png" class="closeComment" width="15px" height="15px">
+                </div>
+                <form id="update-comment-form">
+                    <input type="hidden">
+                    <textarea id="update-comment"></textarea>
+                    <button type="submit">Submit</button>
+                    <div class="loader">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                    </div>  
+                </form>
+            </div>
+        </div>
+        <div class="blogpage-container">
+            <div class="comments">
+                <div class="blog-options">
+                    <div class="blog-options-small">
+                        <img src="./images/like.png" id="likebtn" width="20px" height="20px"/>
+                        <h4></h4>
+                    </div>
+                    <div class="blog-options-small">
+                        <img src="./images/dislike.png" id="dislikebtn" width="20px" height="20px"/>
+                        <h4></h4>
+                    </div>
+                    <div class="share-circular">
+                        <img src="./images/share.png" width="20px" height="20px"/>
+                    </div>    
+                </div>
+                <h3>Comments</h3>
+                <div class="comments-part1">
+                    <div class="blog-profile">
+                    </div>
+                    <input type="text" placeholder="Type your comment here" id="comment-field"/>
+                </div>
+                <div class="comment-container">
+                </div> 
+            </div>
+        </div>
+        <footer>
+            <div class="footer-part1">
+                <div class="footer-left">
+                    <div class="footer-icons">
+                        <img src="./images/email.png" width="20px" height="20px">
+                        <h4>j.karenzi@alustudent.com</h4>
+                    </div>
+                    <div class="footer-icons">
+                        <img src="./images/telephone.png" width="20px" height="20px">
+                        <h4>+250789906160</h4>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h3>Socials</h3>
+                    <div class="socials">
+                        <img src='./images/youtube.png' width="40px" height="30px"/>
+                        <img src='./images/instagram.png' width="30px" height="30px"/>
+                        <img src='./images/whatsapp.png' width="35px" height="35px"/>
+                        <img src='./images/linkedin.png' width="30px" height="30px"/>
+                        <img src='./images/x.png' width="30px" height="30px"/>
+                    </div>
+                </div>
+            </div>
+            <h4 class="copyright">Copyright@2024. All rights reserved</h4>
+        </footer>
+        <script src="./css/main.js"></script>
+        <script src="./blogpage.js"></script>
+    </body>
+</html>    
