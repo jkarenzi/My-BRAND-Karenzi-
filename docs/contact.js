@@ -1,8 +1,32 @@
 const form = document.getElementsByClassName("contact-form")[0]
+const loader = document.getElementsByClassName("loader")[0]
 
-form.addEventListener('submit', (e) => {
+const url = "https://my-brand-karenzi-backend.onrender.com"
+
+const uploadQuery = async (formData) => {
+    loader.style.display = "flex"
+    const resp = await fetch(`${url}/queries/create_query`,{
+        method:"POST",
+        headers:{
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+
+    let response = await resp.json()
+    loader.style.display = "none"
+    alert(response.msg)
+}
+
+form.addEventListener('submit', async (e) => {
     e.preventDefault()
-    console.log("hello")
+    
+
+    if(!token){
+        alert("Please login")
+    }
+
     const username = document.getElementById('contact-username').value.trim();
     const email = document.getElementById('contact-email').value.trim();
     const content = document.getElementById('contact-textarea').value.trim();
@@ -14,9 +38,9 @@ form.addEventListener('submit', (e) => {
     errorEmail.textContent = ""
     errorContent.textContent = ""
 
-    let userRegex = /[A-Za-z]{5,}/
-    let contentRegex = /^\w+(\s+\w+){9,}[.,?!]?$/
-    let emailRegex = /^\w{1,}@\w{1,}\.\w{1,}$/
+    let userRegex = /[A-Za-z0-9]/
+    let contentRegex = /[A-Za-z0-9]/
+    let emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/
 
     if(!email) {
         errorEmail.textContent = "Email is required"
@@ -40,5 +64,15 @@ form.addEventListener('submit', (e) => {
         if(!contentRegex.test(content)){
             errorContent.textContent = "Minimum of 10 words required"
         }
+    }
+
+    if(!(errorUsername.textContent && errorEmail.textContent && errorContent.textContent)){
+        const userData = decodeJWT(token)
+        const formData = {
+            userId: userData._id,
+            query: content
+        }
+
+        uploadQuery(formData)
     }
 })
