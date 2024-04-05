@@ -32,6 +32,18 @@ nav a {
     padding-right: 1rem;
 }
 
+.header-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #DF5F17;
+    color: white;
+    margin-right: 2rem;
+}
+
 .user-box1{
     display: flex;
     align-items: center;
@@ -70,6 +82,7 @@ nav a {
     top: 4rem;
     right: 0;
     width: 7rem;
+    z-index: 1;
 }
 
 .dropdown button {
@@ -189,7 +202,6 @@ nav a {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     color: white;
 }
@@ -197,12 +209,12 @@ nav a {
 .admin-container {
     display: flex;
     flex-direction: column;
-    width: 85%;
-    height: 20rem;
+    width: 90%;
     border-radius: 10px;
     background-color: #3a3a3a;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    overflow: hidden;
 }
 
 .admin-header {
@@ -216,7 +228,7 @@ nav a {
 
 .contact-query {
     display: flex;
-    width: 95.35%;
+    width: 94.7%;
     height: 4rem;
     align-items: center;
     justify-content: space-between;
@@ -257,12 +269,16 @@ nav a {
 
 .contact-query h4:nth-of-type(4){
     font-weight: 400;
-}
+}  
 
 .timestamp {
     display: flex;
     width: 5rem;
     justify-content: flex-start;
+}
+
+.timestamp h4 {
+    font-size: small;
 }
 
 .admin-header1 {
@@ -293,7 +309,7 @@ nav a {
 .contact-query1 {
     display: flex;
     flex-direction: column;
-    width: 93.8%;
+    width: 92.9%;
     align-items: flex-start;
     border-top: 1px solid #727272;
     padding-left: 2rem;
@@ -312,7 +328,7 @@ nav a {
 .admin-container1 {
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 90%;
     height: 15rem;
     border-radius: 10px;
     background-color: #3a3a3a;
@@ -434,10 +450,53 @@ footer h3, footer h4 {
     margin-top: 1rem;
 }
 
+/* refactor for dashboard*/
+.big-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 36rem;
+}
+
+.left-drawer{
+    display: flex;
+    flex-direction: column;
+    background: #222222;
+    width: 20%;
+    height: 100%;
+}
+
+.left-link{
+    width: 87%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+
+.left-link:hover {
+    background-color: #3a3a3a;
+}
+
+.left-link a {
+    text-decoration: none;
+    color:white;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 @media only screen and (max-width: 768px) {
     .logo {
         width: 35px;
         height: 20px;
+        margin-left: 2rem;
     }
     
     nav {
@@ -487,7 +546,6 @@ footer h3, footer h4 {
 
     .admin-container{
         width: 90%;
-        height: 40rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
@@ -522,5 +580,58 @@ footer h3, footer h4 {
     .sm-header-link:first-of-type {
         margin: 0;
     }
+
+    .left-drawer{
+        display: none;
+    }
+
+    .big-container{
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+        gap: 2rem;
+    }
 }
+
+/* loading animation*/
+
+.loader {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+  
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #DF5F17;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+  
+.dot1 {
+animation-delay: -0.32s;
+}
+
+.dot2 {
+animation-delay: -0.16s;
+}
+
+.dot3 {
+animation-delay: 0s;
+}
+
+
 
