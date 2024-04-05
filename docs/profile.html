@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="stylesheet" href="./css/Profile.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body class="profile-body">
+        <header>
+            <img class="logo" src="./images/MJ.png" width="50px" height="30px"/>
+            <nav>
+                <a href="./index.html">About</a>
+                <a href="./contact.html">Contact me</a>
+                <a href="./portfolio.html">Portfolio</a>
+                <a href="./blogs.html">Blogs</a>
+            </nav>
+            <div class="user-box1" onclick="toggleMenu()">
+                <div class="user-box2">
+                    
+                </div>
+            </div>
+            <img src="./images/hamburger.png" class="ham" width="20px" height="15px"/>
+            <div class="dropdown">
+                <a href="./index.html">About</a>
+                <a href="./contact.html">Contact me</a>
+                <a href="./portfolio.html">Portfolio</a>
+                <a href="./blogs.html">Blogs</a>
+                <a href="./profile.html">Profile</a>
+                <button>Logout</button>
+            </div>
+            <div class='dropdown1'>
+                <a href="./profile.html">Profile</a>
+                <button>Logout</button>
+            </div>
+        </header>
+        <div class="usermgt-overlay-big-u">
+            <div class="usermgt-overlay-u">
+                <div class="usermgt-overlay-header">
+                    <h3>Update Username</h3>
+                    <img src="./images/close.png" id="close-update-u" width="15px" height="15px">
+                </div>
+                <form id="usermgt-form-u">
+                    <div class="update">
+                        <label>Password</label>
+                        <input type="password" id="password-u" required>
+                    </div>
+                    <div class="update">
+                        <label>New Username</label>
+                        <input type="text" id="new-username" required>
+                    </div>
+                    <button type="submit" id="usermgt-submit">Submit</button>
+                    <div class="loader">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="usermgt-overlay-big-p">
+            <div class="usermgt-overlay-p">
+                <div class="usermgt-overlay-header">
+                    <h3>Update Password</h3>
+                    <img src="./images/close.png" id="close-update-p" width="15px" height="15px">
+                </div>
+                <form id="usermgt-form-p">
+                    <div class="update">
+                        <label>Old Password</label>
+                        <input type="password" id="old-password" required>
+                    </div>
+                    <div class="update">
+                        <label>New Password</label>
+                        <input type="password" id="new-password" required>
+                    </div>
+                    <button type="submit" id="usermgt-submit">Submit</button>
+                    <div class="loader">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="usermgt-overlay-big-e">
+            <div class="usermgt-overlay-e">
+                <div class="usermgt-overlay-header">
+                    <h3>Update Email</h3>
+                    <img src="./images/close.png" id="close-update-e" width="15px" height="15px">
+                </div>
+                <form id="usermgt-form-e">
+                    <div class="update">
+                        <label>Password</label>
+                        <input type="password" id="password-e" required>
+                    </div>
+                    <div class="update">
+                        <label>New Email</label>
+                        <input type="email" id="new-email" required>
+                    </div>
+                    <button type="submit" id="usermgt-submit">Submit</button>
+                    <div class="loader">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="usermgt-overlay-big-pr">
+            <div class="usermgt-overlay-pr">
+                <div class="usermgt-overlay-header">
+                    <h3>Update Profile Image</h3>
+                    <img src="./images/close.png" id="close-update-pr" width="15px" height="15px">
+                </div>
+                <form id="usermgt-form-pr">
+                    <div class="update">
+                        <label>Password</label>
+                        <input type="password" id="password-pr" required>
+                    </div>
+                    <div class="update">
+                        <label>New Profile Image</label>
+                        <input type="file" style="border-bottom: none" accept="image/*" id="new-image" required>
+                    </div>
+                    <button type="submit" id="usermgt-submit">Submit</button>
+                    <div class="loader">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="profile-header">
+            
+        </div>
+        <div class="profile-container">
+            <div class="user-box5">
+                <div class="user-box6">
+                    
+                </div>
+                <img src="./images/change-profile.png" width="30px" height="30px" class="camera"/>
+            </div>
+            <div class="profile-change">
+                <div class="change">
+                    <h3></h3>
+                    <img src="./images/pencil.png" id="edit-username" width="15px" height="15px"/>
+                </div>
+                <div class="change">
+                    <h3></h3>
+                    <img src="./images/pencil.png" id="edit-email" width="15px" height="15px"/>
+                </div>
+                <div class="change">
+                    <h3>Password: ************</h3>
+                    <img src="./images/pencil.png" id="edit-password" width="15px" height="15px"/>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-part1">
+                <div class="footer-left">
+                    <div class="footer-icons">
+                        <img src="./images/email.png" width="20px" height="20px">
+                        <h4>j.karenzi@alustudent.com</h4>
+                    </div>
+                    <div class="footer-icons">
+                        <img src="./images/telephone.png" width="20px" height="20px">
+                        <h4>+250789906160</h4>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h3>Socials</h3>
+                    <div class="socials">
+                        <img src='./images/youtube.png' width="40px" height="30px"/>
+                        <img src='./images/instagram.png' width="30px" height="30px"/>
+                        <img src='./images/whatsapp.png' width="35px" height="35px"/>
+                        <img src='./images/linkedin.png' width="30px" height="30px"/>
+                        <img src='./images/x.png' width="30px" height="30px"/>
+                    </div>
+                </div>
+            </div>
+            <h4 class="copyright">Copyright@2024. All rights reserved</h4>
+        </footer>
+        <script src="./css/main.js"></script>
+        <script src="./profile.js"></script>
+    </body>
+</html>
