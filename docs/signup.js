@@ -1,7 +1,38 @@
 const signupForm = document.getElementById("signup-submit")
+const url = "https://my-brand-karenzi-backend.onrender.com"
+
+const loader = document.getElementsByClassName("loader")[0]
+
+const signUp = async (formData) => {
+    loader.style.display = "flex"
+    try{
+        const resp = await fetch(`${url}/auth/signup`,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+            },        
+            body: JSON.stringify(formData)
+        })
+    
+        console.log(resp)
+        let response = await resp.json()
+
+        loader.style.display = "none"
+    
+        if(resp.status === 201){
+            alert(response.msg)
+            window.location.href = './login.html'
+        }else{
+            alert(response.msg)
+        }
+    }catch(err){
+        console.log(err.message)
+        alert("Error")
+    }     
+}
 
 
-signupForm.addEventListener('submit', (e) => {
+signupForm.addEventListener('submit', async (e) => {
     e.preventDefault()
     const username = document.getElementById("username").value.trim()
     const password = document.getElementById("password").value.trim()
@@ -15,8 +46,8 @@ signupForm.addEventListener('submit', (e) => {
     errorEmail.textContent = ""
 
     let userRegex = /[A-Za-z]{5,}/
-    let passRegex = /\w{8,}[A-Z]{1,}\d{1,}/
-    let emailRegex = /^\w{1,}@\w{1,}\.\w{1,}$/
+    let passRegex = /^[A-Za-z0-9]{8,}$/
+    let emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/
 
     if(!email) {
         errorEmail.textContent = "Email is required"
@@ -41,4 +72,15 @@ signupForm.addEventListener('submit', (e) => {
             errorPassword.textContent = "Password must be atleast 8 characters long and contain atleast one uppercase letter and one number"
         }
     }
+
+    if(!(errorUsername.textContent && errorPassword.textContent && errorEmail.textContent)){
+        console.log("accessed")
+        const formData = {
+            username,
+            password,
+            email
+        }
+
+        signUp(formData)
+    }   
 })
