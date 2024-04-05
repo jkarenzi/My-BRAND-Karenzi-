@@ -32,6 +32,18 @@ nav a {
     padding-right: 1rem;
 }
 
+.header-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #DF5F17;
+    color: white;
+    margin-right: 2rem;
+}
+
 .user-box1{
     display: flex;
     align-items: center;
