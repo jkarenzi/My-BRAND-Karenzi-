@@ -10,6 +10,8 @@ if(!userInfo.isAdmin){
 
 (async () => {
     try{
+        const loaderbig = document.getElementsByClassName("loader-big")[0]
+        loaderbig.style.display = "flex"
         const url = "https://my-brand-karenzi-backend.onrender.com"
         const token = localStorage.getItem("token")
 
@@ -24,6 +26,7 @@ if(!userInfo.isAdmin){
         let response = await resp.json()
     
         if(resp.ok){
+            loaderbig.style.display = "none"
             for(let user of response.userList){
                 const container = document.getElementsByClassName("userlist-container")[0]
 
@@ -157,6 +160,8 @@ userSearchSubmit.onclick = async function () {
     }
 
     try{
+        const loaderbig = document.getElementsByClassName("loader-big")[0]
+        loaderbig.style.display = "flex"
         const resp = await fetch(`${url}/usermgt/get_users?search_query=${userSearhInput}`,{
             method:"GET",
             headers:{
@@ -166,7 +171,7 @@ userSearchSubmit.onclick = async function () {
         })
 
         let response = await resp.json()
-    
+        loaderbig.style.display = "none"
         if(resp.ok){
             if(response.userList.length !== 0){
                 for(let user of response.userList){

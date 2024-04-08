@@ -25,6 +25,8 @@ for(let item of leftLinks){
 }
 
 (async () => {
+    const loaderbig = document.getElementsByClassName("loader-big")[0]
+    loaderbig.style.display = "flex"
     const resp = await fetch(`${url}/queries/get_queries`,{
         method:"GET",
         headers:{
@@ -35,7 +37,7 @@ for(let item of leftLinks){
 
     let response = await resp.json()
     console.log(response)
-
+    loaderbig.style.display = "none"
     if(resp.ok){
         const adminHeader = document.getElementsByClassName("admin-header")[0]
         adminHeader.textContent = `${response.queryList.length} results`
