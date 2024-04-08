@@ -1,5 +1,6 @@
 const loginForm = document.getElementById("login-submit")
 const url = "https://my-brand-karenzi-backend.onrender.com"
+
 const loader = document.getElementsByClassName("loader")[0]
 
 const decodeJWT = (token) => {

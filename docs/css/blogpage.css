@@ -624,3 +624,20 @@ animation-delay: -0.16s;
 .dot3 {
 animation-delay: 0s;
 }
+
+.loader-big {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loader1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
