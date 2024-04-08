@@ -141,7 +141,12 @@ const getComments = async () => {
     
         if(resp.ok){
             const img = document.getElementsByClassName("comment-userimg")[0]
-            img.src = decodeJWT(token).imageUrl
+            if(token){
+                img.src = decodeJWT(token).imageUrl
+            }else{
+                img.src = "https://res.cloudinary.com/ditrc0kph/image/upload/v1711450197/rgrjpswkhjey1xgunqhr.png"
+            }
+            
 
             for(let comment of response.commentList){
                                 // Create comment div
