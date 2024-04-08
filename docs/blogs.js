@@ -20,6 +20,8 @@ function scrollRight1() {
 
 (async () => {
     try{
+        const loaderbig = document.getElementsByClassName("loader-big")[0]
+        loaderbig.style.display = "flex"
         const resp = await fetch(`${url}/blogs/get_blogs`,{
             method: 'GET',
             headers:{
@@ -28,7 +30,7 @@ function scrollRight1() {
         })
     
         let response = await resp.json()
-    
+        loaderbig.style.display = "none"
         if(resp.ok){
             for(let blog of response.blogList){
                 const blogDiv = document.createElement('div');

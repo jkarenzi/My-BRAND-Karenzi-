@@ -12,6 +12,8 @@ for(let item of leftLinks){
 }
 
 (async () => {
+    const loaderbig = document.getElementsByClassName("loader-big")[0]
+    loaderbig.style.display = "flex"
     try{
         const pathList = window.location.href.split('?')
         const queryId = pathList[pathList.length-1].split("=")[1]
@@ -25,7 +27,7 @@ for(let item of leftLinks){
         })
     
         let response = await resp.json()
-    
+        loaderbig.style.display = "none"
         if(resp.ok){
             const adminContainer = document.getElementsByClassName("admin-container1")[0]
                 // Create admin-header1 div
@@ -44,6 +46,10 @@ for(let item of leftLinks){
 
             // Append img element to back-circular div
             backCircularDiv.appendChild(backButtonImg);
+
+            backCircularDiv.onclick = function () {
+                window.location.href = './admin.html'
+            }
 
             // Append back-circular div to admin-header1 div
             adminHeaderDiv.appendChild(backCircularDiv);

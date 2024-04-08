@@ -55,6 +55,8 @@ const updateForm = document.getElementById("update-comment-form")
 
 const getBlog = async () => {
     try{
+        const loaderbig = document.getElementsByClassName("loader-big")[0]
+        loaderbig.style.display = "flex"
         const resp = await fetch(`${url}/blogs/get_blog/${blogId}`,{
             method: 'GET',
             headers:{
@@ -63,7 +65,7 @@ const getBlog = async () => {
         })
     
         let response = await resp.json()
-    
+        loaderbig.style.display = "none"
         if(resp.ok){
             let blog = response.blog
             const blogPageHeader = document.createElement('div');
@@ -138,6 +140,9 @@ const getComments = async () => {
         let response = await resp.json()
     
         if(resp.ok){
+            const img = document.getElementsByClassName("comment-userimg")[0]
+            img.src = decodeJWT(token).imageUrl
+
             for(let comment of response.commentList){
                                 // Create comment div
                 const commentDiv = document.createElement('div');
@@ -161,11 +166,6 @@ const getComments = async () => {
 
                 // Append img element to blog-profile div
                 blogProfileDiv.appendChild(profileImg);
-
-                const commentProfileDiv = document.getElementsByClassName("blog-profile")[1]
-                const commentImg = document.createElement("img")
-                commentImg.src = decodeJWT(token).imageUrl
-
 
                 // Create comment-owner div
                 const commentOwnerDiv = document.createElement('div');

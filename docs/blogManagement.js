@@ -12,6 +12,8 @@ if(!userInfo.isAdmin){
 
 (async () => {
     try{
+        const loaderbig = document.getElementsByClassName("loader-big")[0]
+        loaderbig.style.display = "flex"
         const url = "https://my-brand-karenzi-backend.onrender.com"
         const resp = await fetch(`${url}/blogs/get_blogs`,{
             method: 'GET',
@@ -23,6 +25,7 @@ if(!userInfo.isAdmin){
         let response = await resp.json()
     
         if(resp.ok){
+            loaderbig.style.display = "none"
             for(let blog of response.blogList){
                 const container = document.getElementsByClassName("bloglist-container")[0]
 
@@ -292,6 +295,8 @@ blogSearchSubmit.onclick = async function () {
     }
 
     try{
+        const loaderbig = document.getElementsByClassName("loader-big")[0]
+        loaderbig.style.display = "flex"
         const resp = await fetch(`${url}/blogs/get_blogs?search_query=${blogSearchInput}`,{
             method:"GET",
             headers:{
@@ -300,7 +305,7 @@ blogSearchSubmit.onclick = async function () {
         })
 
         let response = await resp.json()
-    
+        loaderbig.style.display = "none"
         if(resp.ok){
             if(response.blogList.length !== 0){
                 for(let blog of response.blogList){
