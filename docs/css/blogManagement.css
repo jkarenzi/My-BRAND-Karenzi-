@@ -485,7 +485,7 @@ footer h3, footer h4 {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    height: 36rem;
+    min-height: 36rem;
 }
 
 .left-drawer{
@@ -493,7 +493,7 @@ footer h3, footer h4 {
     flex-direction: column;
     background: #222222;
     width: 20%;
-    height: 100%;
+    flex: 1
 }
 
 .left-link{

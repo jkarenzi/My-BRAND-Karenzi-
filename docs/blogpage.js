@@ -5,6 +5,8 @@ const url = "https://my-brand-karenzi-backend.onrender.com"
 const loader = document.getElementsByClassName("loader")[0]
 
 const deleteComment = async (id) => {
+    const loaderbig = document.getElementsByClassName("loader-big")[0]
+    loaderbig.style.display = "flex"
     try{
         const resp = await fetch(`${url}/comments/delete_comment/${id}`,{
             method:"DELETE",
@@ -12,6 +14,8 @@ const deleteComment = async (id) => {
                 'Authorization': `Bearer ${token}`
             }
         })
+
+        loaderbig.style.display = "none"
 
         if(resp.status === 204){
             alert("Comment deleted successfully")
@@ -198,69 +202,66 @@ const getComments = async () => {
                 // Append blog-profile and comment-owner divs to comment-header div
                 commentHeaderDiv.appendChild(blogProfileDiv);
                 commentHeaderDiv.appendChild(commentOwnerDiv);
+                bigCommentHeaderDiv.appendChild(commentHeaderDiv)
+                commentDiv.appendChild(bigCommentHeaderDiv);
 
-                // Create img element for options
-                const optionsImg = document.createElement('img');
-                optionsImg.src = './images/dots.png';
-                optionsImg.width = 20
-                optionsImg.height = 20
+                if(decodeJWT(token).isAdmin || (decodeJWT(token).username === comment.username)){
+                        // Create img element for options
+                    const optionsImg = document.createElement('img');
+                    optionsImg.src = './images/dots.png';
+                    optionsImg.width = 20
+                    optionsImg.height = 20
 
-                optionsImg.onclick = function () {
-                    optionsMenu.style.display = "flex"
+                    optionsImg.onclick = function () {
+                        optionsMenu.style.display = "flex"
+                    }
+
+                    bigCommentHeaderDiv.appendChild(optionsImg)
+
+                    const optionsMenu = document.createElement("div")
+                    optionsMenu.classList.add("options-menu")
+
+                    const optionsMenuHeader = document.createElement("div")
+                    optionsMenuHeader.classList.add("options-menu-header")
+                    const optionsCloser = document.createElement("img")
+                    optionsCloser.src = './images/close.png'
+                    optionsCloser.width = 12
+                    optionsCloser.height = 12
+
+                    optionsCloser.onclick = function () {
+                        optionsMenu.style.display = "none"
+                    }
+
+                    const updateBtn = document.createElement("button")
+                    updateBtn.classList.add("update-btn")
+                    updateBtn.textContent = "Update Comment"
+                    updateBtn.onclick = function () {
+                        optionsMenu.style.display = "none"
+                        updateInput.id = comment._id
+                        commentOverlay.style.display = "flex"
+                    }
+
+                    const deleteBtn = document.createElement("button")
+                    deleteBtn.textContent = "Delete Comment"
+                    deleteBtn.classList.add("delete-btn")
+
+                    deleteBtn.onclick = async function () {
+                        await deleteComment(comment._id)
+                    }
+    
+                    optionsMenuHeader.appendChild(optionsCloser)
+                    optionsMenu.appendChild(optionsMenuHeader)
+                    optionsMenu.appendChild(updateBtn)
+                    optionsMenu.appendChild(deleteBtn)
+
+                    commentDiv.appendChild(optionsMenu)    
                 }
-
-                const optionsMenu = document.createElement("div")
-                optionsMenu.classList.add("options-menu")
-
-                const optionsMenuHeader = document.createElement("div")
-                optionsMenuHeader.classList.add("options-menu-header")
-                const optionsCloser = document.createElement("img")
-                optionsCloser.src = './images/close.png'
-                optionsCloser.width = 12
-                optionsCloser.height = 12
-
-                optionsCloser.onclick = function () {
-                    optionsMenu.style.display = "none"
-                }
-
-                const updateBtn = document.createElement("button")
-                updateBtn.classList.add("update-btn")
-                updateBtn.textContent = "Update Comment"
-                updateBtn.onclick = function () {
-                    optionsMenu.style.display = "none"
-                    updateInput.id = comment._id
-                    commentOverlay.style.display = "flex"
-                }
-
-                const deleteBtn = document.createElement("button")
-                deleteBtn.textContent = "Delete Comment"
-                deleteBtn.classList.add("delete-btn")
-
-                deleteBtn.onclick = async function () {
-                    await deleteComment(comment._id)
-                }
- 
-                optionsMenuHeader.appendChild(optionsCloser)
-                optionsMenu.appendChild(optionsMenuHeader)
-                optionsMenu.appendChild(updateBtn)
-                optionsMenu.appendChild(deleteBtn)
-
-                optionsImg.onClick = function () {
-
-                }
-
-                commentDiv.appendChild(optionsMenu)
-
 
                 // Create comment-text div
                 const commentTextDiv = document.createElement('div');
                 commentTextDiv.classList.add('comment-text');
                 commentTextDiv.textContent = comment.comment;
 
-                // Append comment-header and comment-text divs to comment div
-                bigCommentHeaderDiv.appendChild(commentHeaderDiv)
-                bigCommentHeaderDiv.appendChild(optionsImg)
-                commentDiv.appendChild(bigCommentHeaderDiv);
                 commentDiv.appendChild(commentTextDiv);
 
                 const commentContainer = document.getElementsByClassName("comment-container")[0]
@@ -300,6 +301,8 @@ commentInput.addEventListener("keydown", async (e) => {
         }
 
         e.preventDefault()
+        const loaderbig = document.getElementsByClassName("loader-big")[0]
+        loaderbig.style.display = "flex"
 
         const userData = decodeJWT(token)
 
@@ -317,6 +320,7 @@ commentInput.addEventListener("keydown", async (e) => {
             },
             body: JSON.stringify(formData)
         })
+        loaderbig.style.display = "none"
 
         let response = await resp.json()
         alert(response.msg)
