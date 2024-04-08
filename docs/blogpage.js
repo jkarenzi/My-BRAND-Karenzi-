@@ -205,7 +205,7 @@ const getComments = async () => {
                 bigCommentHeaderDiv.appendChild(commentHeaderDiv)
                 commentDiv.appendChild(bigCommentHeaderDiv);
 
-                if(decodeJWT(token).isAdmin || (decodeJWT(token).username === comment.username)){
+                if((token && decodeJWT(token).isAdmin) || (token && (decodeJWT(token).username === comment.username))){
                         // Create img element for options
                     const optionsImg = document.createElement('img');
                     optionsImg.src = './images/dots.png';
