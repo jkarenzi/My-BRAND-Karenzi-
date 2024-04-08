@@ -8,8 +8,6 @@ if(!userInfo.isAdmin){
     window.location.href = './index.html'
 }
 
-const url = "https://my-brand-karenzi-backend.onrender.com"
-
 (async () => {
     try{
         const url = "https://my-brand-karenzi-backend.onrender.com"
@@ -132,6 +130,8 @@ const url = "https://my-brand-karenzi-backend.onrender.com"
         alert(err.message)
     }
 })()
+
+const url = "https://my-brand-karenzi-backend.onrender.com"
 
 const leftLinks = document.getElementsByClassName("left-link")
 
