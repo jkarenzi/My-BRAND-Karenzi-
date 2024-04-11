@@ -219,6 +219,7 @@ userSearchSubmit.onclick = async function () {
                                     'Authorization': `Bearer ${token}`
                                 }
                             })
+
                             if(resp.status === 204){
                                 container.removeChild(document.getElementById(`key-${user._id}`))
                                 alert("User deleted successfully")

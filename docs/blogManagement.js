@@ -255,6 +255,9 @@ form.addEventListener('submit', async (e) => {
                 loader.style.display = "none"
 
                 alert(response.msg)
+                if(resp.ok){
+                    window.location.reload()
+                }
             }catch(err){
                 alert(err.message)
             }
@@ -278,6 +281,9 @@ form.addEventListener('submit', async (e) => {
                 loader.style.display = "none"
 
                 alert(response.msg)
+                if(resp.status === 201){
+                    window.location.reload()
+                }
             }catch(err) {
                 alert(err.message)
             }
@@ -378,6 +384,7 @@ blogSearchSubmit.onclick = async function () {
                                     'Authorization': `Bearer ${token}`
                                 }
                             })
+
                             if(resp.status === 204){
                                 container.removeChild(document.getElementById(`key-${blog._id}`))
                                 alert("Blog deleted successfully")

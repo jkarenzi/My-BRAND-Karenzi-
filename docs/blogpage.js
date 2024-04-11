@@ -19,6 +19,7 @@ const deleteComment = async (id) => {
 
         if(resp.status === 204){
             alert("Comment deleted successfully")
+            window.location.reload()
 
         }else{
             let response = await resp.json()
@@ -47,6 +48,9 @@ const updateComment = async (formData) => {
         loader.style.display = "none"
 
         alert(response.msg)
+        if(resp.ok){
+            window.location.reload()
+        }
     }catch(err){
         alert(err.message)
     }
@@ -111,6 +115,12 @@ const getBlog = async () => {
     
             blogPageHeader.appendChild(h1);
             blogPageHeader.appendChild(blogPageHeader2);
+
+            const blogPageImg = document.createElement("div")
+            blogPageImg.classList.add("blogpage-img")
+            const blogImg = document.createElement("img")
+            blogImg.src = blog.imageUrl
+            blogPageImg.appendChild(blogImg)
     
             // Create blog content
             const blogPageBlog = document.createElement('div');
@@ -122,6 +132,7 @@ const getBlog = async () => {
     
             // Prepend elements to the document
             blogPageContainer.prepend(blogPageBlog);
+            blogPageContainer.prepend(blogPageImg)
             blogPageContainer.prepend(blogPageHeader);
 
             blogOptions[0].lastElementChild.textContent = blog.likes
@@ -324,6 +335,9 @@ commentInput.addEventListener("keydown", async (e) => {
 
         let response = await resp.json()
         alert(response.msg)
+        if(resp.status === 201){
+            window.location.reload()
+        }
     }
 })
 
